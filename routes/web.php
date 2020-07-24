@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/helloword', 'HelloController@HelloWord');
+Route::get('/login', 'LoginController@login');
+Route::get('/ticket', 'TicketController@ticket');
+
+Route::post('/ticket/ticketadd', 'TicketController@ticketadd');
