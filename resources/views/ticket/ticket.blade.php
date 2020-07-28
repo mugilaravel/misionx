@@ -1,4 +1,4 @@
-@extends('layout.master')
+@extends('layout.masterpolos')
 
 @section('content_lable')
 @endsection
@@ -9,6 +9,8 @@
 @section('content_footer')
     Content Foot
 @endsection
+
+
 
 
 @section('content_main')
@@ -109,7 +111,7 @@
                   </div>
                   <div class="form-group">
                     <label for="deskripsi">deskripsi</label>
-                    <input type="text" name="deskripsi" class="form-control" id="deskripsi">
+                    <textarea rows="2" type="text" name="deskripsi" class="form-control" id="deskripsi"></textarea>
                   </div>
                 {{-- <div class="row">
                     <div class="form-group col-md-3">
@@ -127,40 +129,14 @@
                     </div>
                 </div> --}}
 
-                <div class="form-group">
-                    <label for="upload">Upload File</label>
-                    <input type="file" name="uploadFile" class="form-control" >
+                <div class="row">
+                    <div class="form-group col-md-4">
+                        <label for="upload">Upload File</label>
+                        <input type="file" name="uploadFile" class="form-control" >
+                    </div>
                 </div>
-                  
-                 
-                   <div class="form-group">
-                        <label for="catatan">catatan</label>
-                        <input type="text" name="catatan" class="form-control" id="catatan">
-                    </div>
-                    <div class="row">
-                        <div class="form-group col-md-2">
-                            <label for="tbl_pengajuan">tbl_pengajuan</label>
-                            <input type="date" name="tbl_pengajuan" class="form-control" id="tbl_pengajuan">
-                        </div>                             
-                        <div class="form-group col-md-2">
-                            <label for="tgl_selesai">tgl_selesai</label>
-                            <input type="date" name="tgl_selesai" class="form-control" id="tgl_selesai">
-                        </div>
-                        <div class="form-group col-md-2">
-                            <label for="status">status</label>
-                            {{-- <input type="text" name="status" class="form-control" id="status"> --}}
-                            <select name="status" class="form-control">
-                                <option value="">Status</option>
-                                <option value="P">Pengajuan</option>    
-                                <option value="O">On Progress</option> 
-                                <option value="D">Selesai</option>                    
-                            </select>
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label for="petugas">petugas</label>
-                            <input type="text" name="petugas" class="form-control" id="petugas">
-                          </div>
-                    </div>
+@yield('helpdesk')
+
                   {{-- <div class="form-group">
                     <label for=""></label>
                     <input type="text" name="" class="form-control" id="">
@@ -224,5 +200,11 @@
 @endsection
 
 @section('footer')
+<script>
+$(document).ready(function () {
+    $("nav.navbar-default").hide();    
+});
+
+</script>
 
 @endsection

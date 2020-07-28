@@ -6,25 +6,25 @@
   <title>Mision X Project</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  @include('layout.css')
+  @include('layout.csspolos')
   </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
+  
   @show
   <!-- Navbar -->
- @include('layout.navbar')
+ {{-- @include('layout.navbarpolos') --}}
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
-  @include('layout.aside')
+  @include('layout.asidepolos')
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper" style="min-height: 1592.4px;">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-      <div class="container-fluid">
-        
-      </div><!-- /.container-fluid -->
+      <div class="container-fluid">        
+      </div>
     </section>
 
     <!--   Main content -->
@@ -34,6 +34,7 @@
           <div class="card-header">
             <h1 class="card-title">@yield('content_lable')</h1>
           <!--div class="card-body table-responsive p-0"-->
+          
             @yield('content_main')
           <!--/div -->
           <!-- /.card-body -->

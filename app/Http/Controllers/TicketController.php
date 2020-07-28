@@ -10,6 +10,10 @@ class TicketController extends Controller
     {
         return view('ticket.ticket');
     }
+    public function Tickethelp()
+    {
+        return view('ticket.tickethelp');
+    }
 
     public function Ticketadd(Request $request)
     {
@@ -44,4 +48,6 @@ class TicketController extends Controller
         $ticket->save();
         return redirect('ticket')->with('sukses','Data Berhasil di Simpan. Nomor Ticket :: '.$ticket->id);
     }
+
+
 }

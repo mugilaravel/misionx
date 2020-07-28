@@ -18,7 +18,7 @@
     <div class="card-body login-card-body">
       <p class="login-box-msg">Sign in to start your session</p>
 
-      <form action="/postlogin" method="post">
+      <form action="/login/loginproses" method="post">
         {{@csrf_field()}}
         <div class="input-group mb-3">
           <input type="text" class="form-control" placeholder="User Id" name='user_id' value="admin">
