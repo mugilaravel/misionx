@@ -13,7 +13,7 @@
   
   @show
   <!-- Navbar -->
- {{-- @include('layout.navbarpolos') --}}
+ @include('layout.navbarpolos')
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
